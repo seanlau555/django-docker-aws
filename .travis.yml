@@ -29,6 +29,7 @@ deploy:
       $(AWS_ACCESS_KEY_ID=${ACCESSKEYID} AWS_SECRET_ACCESS_KEY=${SECRETACCESSKEY} ${ECR_LOGIN})
       && docker push "${IMAGE}"
       && docker push "${IMAGE_LATEST}"
+      
     skip_cleanup: true
     on:
       all_branches: true
